@@ -1,5 +1,7 @@
 import React, {useContext} from 'react';
 import {CartContext} from '../contexts/CartContext'
+import { Link } from 'react-router-dom';
+
 
 // Components
 import Item from './ShoppingCartItem';
@@ -21,7 +23,9 @@ const ShoppingCart = () => {
 
 			<div className="shopping-cart__checkout">
 				<p>Total: ${getCartTotal()}</p>
+				<Link to = "/checkout ">
 				<button>Checkout</button>
+				</Link> 
 			</div>
 		</div>
 	);
