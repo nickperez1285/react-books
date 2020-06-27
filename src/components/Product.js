@@ -24,3 +24,5 @@ const Product = props => {
 };
 
 export default Product;
+		// < {props.product.link} ?   a href = {props.product.link} :a href =  "https://www.amazon.com">
+
