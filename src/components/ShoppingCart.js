@@ -15,6 +15,11 @@ const ShoppingCart = () => {
 		}, 0).toFixed(2);
 	};
 
+	const taxed = ( price) => { 
+		const final =  price * 1.15 ; 
+		return final.toFixed(2)
+	}
+
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
@@ -22,7 +27,12 @@ const ShoppingCart = () => {
 			))}
 
 			<div className="shopping-cart__checkout">
-				<p>Total: ${getCartTotal()}</p>
+			<div id = 'costs'>
+				<p> ${getCartTotal()}</p><br/>
+				<p>Tax: ${(getCartTotal() *.15).toFixed(2)}</p><br/>
+
+				<p>Total: ${taxed(getCartTotal())}</p>
+				</div> 
 				<Link to = "/checkout">
 				<button>Checkout</button>
 				</Link> 

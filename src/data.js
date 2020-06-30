@@ -32,5 +32,23 @@ export default [
 		id: 5,
 		title: 'Where the Crawdads Sing',
 		price: 9.59,
-		image:'https://images-na.ssl-images-amazon.com/images/I/51NYjNgldSL._SX330_BO1,204,203,200_.jpg'	}
+		image:'https://images-na.ssl-images-amazon.com/images/I/51NYjNgldSL._SX330_BO1,204,203,200_.jpg'	
+	},
+	{
+		id: 6,
+		title: 'The Room Where It Happened: A White',
+		price: 19.42,
+		image:'https://images-na.ssl-images-amazon.com/images/I/711uoDPWwXL._SX330_BO1,204,203,200_.jpg'	
+	},
+		{
+		id: 7,
+		title: 'Fair Warning (Jack McEvoy Book 3)',
+		price: 13.99,
+		image:'https://m.media-amazon.com/images/I/51WjS4D03EL.jpg._SX330_BO1,204,203,200_.jpg'	
+	},{
+		id: 8,
+		title: 'Feasting Wild: In Search of the Last Untamed Food',
+		price: 14.99,
+		image:'https://m.media-amazon.com/images/I/51z-qwvBkCL.jpg._SX330_BO1,204,203,200_.jpg'	
+	}
 ];

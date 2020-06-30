@@ -7,7 +7,7 @@ const Navigation = () => {
 
 	return (
 <div className = 'top'>
-<center><h1 > BOOKS R US </h1> </center>
+<center><NavLink to="/"> <h1 > BOOKS R US </h1></NavLink> </center>
 		<div className="navigation">
 			
 
