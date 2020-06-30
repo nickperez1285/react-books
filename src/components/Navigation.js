@@ -7,7 +7,7 @@ const Navigation = () => {
 
 	return (
 <div className = 'top'>
-<center><NavLink to="/"> <h1 > BOOKS R US </h1></NavLink> </center>
+<center><NavLink to="/"> <strong><h1 > BOOKS R US </h1></strong></NavLink> </center>
 		<div className="navigation">
 			
 
