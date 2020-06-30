@@ -97,7 +97,7 @@ export default function Checkout() {
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Books R Us Checkout
+            Books R Us Checkout	
           </Typography>
         </Toolbar>
       </AppBar>

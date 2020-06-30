@@ -7,7 +7,7 @@ import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 import {ProductContext} from './contexts/ProductContext'
 import {CartContext} from './contexts/CartContext'
-import Checkout from './components/Checkout'
+import Checkout from './components/checkout/Checkout'
 function App() {
 const [products, setProducts] = useState(data);
 const [cart, setCart] = useState([]);

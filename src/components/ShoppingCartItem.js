@@ -8,14 +8,14 @@ const Item = props => {
 
 	return (
 		<div className="shopping-cart_item">
-				<a href = "https://www.amazon.com">
+				<a href = {props.link}>
 
 			<img src={props.image} alt={`${props.title} book`} />
 			 </a>
 
 
 			<div>
-		<a href = "https://www.amazon.com">
+		<a href = {props.link}>
 				<h1>{props.title}</h1>
 				<p>$ {props.price}</p>
 			 </a>
