@@ -7,16 +7,12 @@ const Navigation = () => {
 
 	return (
 <div className = 'top'>
-<center><NavLink to="/"> <strong><h1 > BOOKS R US </h1></strong></NavLink> </center>
+	<center><NavLink to="/"> <h1 > BOOKS R US </h1></NavLink> </center>
 		<div className="navigation">
-			
-
 			<NavLink to="/">Products</NavLink>
-			<NavLink to="/cart">
-				Cart <span>{cart.length}</span>
-			</NavLink>
+			<NavLink to="/cart">Cart <span>{cart.length}</span></NavLink>
 		</div>
-		</div>
+</div>
 	);
 };
 

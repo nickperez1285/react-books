@@ -4,7 +4,7 @@ import data from './data';
 // Components
 import Navigation from './components/Navigation';
 import Products from './components/Products';
-import ShoppingCart from './components/ShoppingCart';
+import Cart from './components/Cart';
 import {ProductContext} from './contexts/ProductContext'
 import {CartContext} from './contexts/CartContext'
 import Checkout from './components/checkout/Checkout'
@@ -12,39 +12,42 @@ function App() {
 const [products, setProducts] = useState(data);
 const [cart, setCart] = useState([]);
 const addItem = item => {
-// add the given item to the cart
-setCart([...cart, item])
-const newProducts = products.filter(pros => pros.id !== item.id )
-setProducts(newProducts)
+	// add the given item to the cart
+	setCart([...cart, item])
+	// removes item from available ones on home page
+	const newProducts = products.filter(pros => pros.id !== item.id )
+	// recreates available products list 
+	setProducts(newProducts)
 };
 const removeItem = itemID => {
-const newCart = cart.filter(item => item.id !== itemID)
-const removedItem = cart.filter(item => item.id === itemID)
-
-setProducts([...products, ...removedItem ])
-setCart(newCart)
+	// removes item from cart
+	const newCart = cart.filter(item => item.id !== itemID)
+	const removedItem = cart.filter(item => item.id === itemID)
+	// adds removed item back to available products list 
+	setProducts([...products, ...removedItem ])
+	setCart(newCart)
 
 }
 return (
+<CartContext.Provider value = {{cart, removeItem}}>
 <ProductContext.Provider value={{products, addItem}}>
-	<CartContext.Provider value = {{cart, removeItem}}>
 	<div className="App">
 		<Navigation  />
-			{/* Routes */}
+			
 			<Route exact path="/">
 				<Products />
 			</Route>
 
 				<Route path="/cart">
-					<ShoppingCart />
+					<Cart />
 				</Route>
 
 				<Route path="/checkout">
 					<Checkout />
 				</Route>
 			</div>
-			</CartContext.Provider>
-		</ProductContext.Provider>
+</ProductContext.Provider>
+</CartContext.Provider>
 
 		);
 		}

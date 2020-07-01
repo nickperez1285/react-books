@@ -1,12 +1,9 @@
 import React, {useContext} from 'react';
 import {CartContext} from '../contexts/CartContext'
 import { Link } from 'react-router-dom';
+import Item from './CartItem';
 
-
-// Components
-import Item from './ShoppingCartItem';
-
-const ShoppingCart = () => {
+const Cart = () => {
 	const {cart} = useContext(CartContext)
 
 	const getCartTotal = () => {
@@ -32,7 +29,7 @@ const ShoppingCart = () => {
 				<p>Tax: ${(getCartTotal() *.15).toFixed(2)}</p><br/>
 
 				<p>Total: ${taxed(getCartTotal())}</p>
-				</div> 
+			</div> 
 				<Link to = "/checkout">
 				<button>Checkout</button>
 				</Link> 
@@ -41,4 +38,4 @@ const ShoppingCart = () => {
 	);
 };
 
-export default ShoppingCart;
+export default Cart;

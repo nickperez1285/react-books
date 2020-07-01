@@ -8,8 +8,8 @@ import Grid from '@material-ui/core/Grid';
 
 const products = [
   { name: 'Book 1', desc: 'The Art of War', price: '$10.11' },
-  { name: 'Book 2', desc: 'Another thing', price: '$3.45' },
-  { name: 'Book 3', desc: 'Something else', price: '$6.51' },
+  { name: 'Book 2', desc: 'To Catch a Bird', price: '$13.45' },
+  { name: 'Book 3', desc: 'Sharry Spotter', price: '$11.51' },
   { name: 'Shipping', desc: '', price: 'Free' },
 ];
 const addresses = ['1 Material-UI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
